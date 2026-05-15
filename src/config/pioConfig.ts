@@ -91,7 +91,7 @@ export const live2dModelConfig: Live2DModelConfig = {
 		// Live2D模型文件路径
 		// path: "/pio/models/live2d/snow_miku/model.json",
 		// path: "/pio/models/live2d/illyasviel/illyasviel.model.json",
-		path: "/pio/models/live2d/furina/furina.model.json",
+		path: "/pio/models/live2d/furina/芙宁娜.model3.json",
 	},
 
 	// 位置配置
