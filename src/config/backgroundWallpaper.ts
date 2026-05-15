@@ -66,7 +66,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			"assets/images/MobileWallpaper/m5.avif",
 			"assets/images/MobileWallpaper/m6.avif",
 			"assets/images/MobileWallpaper/m7.avif",
-			"assets/images/MobileWallpaper/m8.avif",
+			// "assets/images/MobileWallpaper/m8.avif",
 			"assets/images/MobileWallpaper/m9.avif",
 			"assets/images/MobileWallpaper/m10.avif",
 			"assets/images/MobileWallpaper/m11.avif",
@@ -91,7 +91,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"Cherish as long as we last Cause S is not for sayonara",
+				"Cherish as long as we, last Cause S is not for sayonara",
 				"Experience I never had, I'm so happy,Happy to just be part of your story",
 				"Do you recall? Back when a smile was more than enough, To make us friends",
 				"Fly, broken wings, To somewhere we can free, Closer to our IDEAL",
