@@ -76,7 +76,7 @@ export const siteConfig: SiteConfig = {
 		logo: {
 			type: "image",
 			value: "assets/images/Furina's Top Hat.png",
-			alt: "logo",
+			alt: "小可爱~",
 		},
 		// 导航栏标题
 		title: "versus0",
