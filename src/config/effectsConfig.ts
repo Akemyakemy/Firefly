@@ -4,7 +4,7 @@ import type { SakuraConfig } from "../types/config";
 
 export const sakuraConfig: SakuraConfig = {
 	// 是否启用樱花特效
-	enable: false,
+	enable: true,
 
 	// 是否允许用户在设置中切换
 	switchable: true,
@@ -20,7 +20,7 @@ export const sakuraConfig: SakuraConfig = {
 		// 樱花最小尺寸倍数
 		min: 0.5,
 		// 樱花最大尺寸倍数
-		max: 1.1,
+		max: 1.5,
 	},
 
 	// 樱花不透明度
