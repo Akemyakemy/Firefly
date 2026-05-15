@@ -76,7 +76,7 @@ export const siteConfig: SiteConfig = {
 		logo: {
 			type: "image",
 			value: "assets/images/Furina's Top Hat.png",
-			alt: "assets/images/Furina's Top Hat.png",
+			alt: "logo",
 		},
 		// 导航栏标题
 		title: "versus0",
@@ -85,7 +85,7 @@ export const siteConfig: SiteConfig = {
 		// 导航菜单对齐方式，left：左对齐，center：居中
 		menuAlign: "center",
 		// 导航栏图标和标题是否跟随主题色
-		followTheme: false,
+		followTheme: true,
 		// 导航栏是否固定在顶部并始终可见
 		stickyNavbar: true,
 	},
@@ -233,7 +233,12 @@ export const siteConfig: SiteConfig = {
 		// 为特定域名的图片添加 referrerpolicy="no-referrer" 属性
 		// 支持通配符 *，例如：["i0.hdslb.com", "*.bilibili.com"]
 		// 可解决指定域名图片加载时的 403 问题（如防盗链图片）
-		noReferrerDomains: [],
+		noReferrerDomains: [
+			"i0.hdslb.com",     // B站图床
+			"i1.hdslb.com",
+			"i2.hdslb.com",
+			"*.bilibili.com",   // 支持通配符
+		],
 	},
 
 	// 字体配置
