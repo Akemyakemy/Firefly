@@ -86,17 +86,18 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "Lovely Furina!",
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"Cherish as long as we last Cause S is not for sayonara",
+				"Experience I never had, I'm so happy,Happy to just be part of your story",
+				"Do you recall? Back when a smile was more than enough, To make us friends",
+				"Fly, broken wings, To somewhere we can free, Closer to our IDEAL",
+				"Love must be the reason why, I still believe in this lie",
+				"Buckled up on velvet seats, Sceneries were passing by",
+				"Not so different from our hell, Not so different from our home",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
@@ -106,11 +107,11 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				// 打字机关闭 → 每次刷新随机显示一条副标题
 				enable: true,
 				// 打字速度（毫秒）
-				speed: 100,
+				speed: 50,
 				// 删除速度（毫秒）
-				deleteSpeed: 50,
+				deleteSpeed: 30,
 				// 完全显示后的暂停时间（毫秒）
-				pauseTime: 2000,
+				pauseTime: 10000,
 			},
 		},
 		// 导航栏配置
