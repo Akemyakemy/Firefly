@@ -85,13 +85,13 @@ export const spineModelConfig: SpineModelConfig = {
 // Live2D 看板娘配置
 export const live2dModelConfig: Live2DModelConfig = {
 	// Live2D 看板娘开关
-	enable: true,
+	enable: false,
 	// Live2D模型配置
 	model: {
 		// Live2D模型文件路径
-		// path: "/pio/models/live2d/snow_miku/model.json",
+		path: "/pio/models/live2d/snow_miku/model.json",
 		// path: "/pio/models/live2d/illyasviel/illyasviel.model.json",
-		path: "/pio/models/live2d/Furina/Furina.model3.json",
+		// path: "/pio/models/live2d/Furina/items_pinned_to_model.json",
 	},
 
 	// 位置配置
@@ -107,9 +107,9 @@ export const live2dModelConfig: Live2DModelConfig = {
 	// 尺寸配置
 	size: {
 		// 容器宽度
-		width: 135,
+		width: 270,
 		// 容器高度
-		height: 165,
+		height: 330,
 	},
 
 	// 交互配置
