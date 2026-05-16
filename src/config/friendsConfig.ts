@@ -23,33 +23,43 @@ export const friendsPageConfig: FriendsPageConfig = {
 // 友链配置
 export const friendsConfig: FriendLink[] = [
 	{
-		title: "夏夜流萤",
+		title: "versus0",
 		imgurl:
-			"https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
-		desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
-		siteurl: "https://blog.cuteleaf.cn",
+			"https://img.542000.xyz/file/friend_avatar/1778931720838_f167cb95af9d881f4378b92b3e181d89_4647054993754934443.jpg",
+		desc: "I may be still unripened.But I'm not afraid.",
+		siteurl: "https://blog.542000.xyz",
 		tags: ["Blog"],
-		weight: 10, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
-	{
-		title: "Firefly Docs",
-		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
-		desc: "Firefly主题模板文档",
-		siteurl: "https://docs-firefly.cuteleaf.cn",
-		tags: ["Docs"],
-		weight: 9,
-		enabled: true,
-	},
-	{
-		title: "Astro",
-		imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
-		desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
-		siteurl: "https://github.com/withastro/astro",
-		tags: ["Framework"],
-		weight: 8,
-		enabled: true,
-	},
+	// {
+	// 	title: "夏夜流萤",
+	// 	imgurl:
+	// 		"https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
+	// 	desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
+	// 	siteurl: "https://blog.cuteleaf.cn",
+	// 	tags: ["Blog"],
+	// 	weight: 10, // 权重，数字越大排序越靠前
+	// 	enabled: true, // 是否启用
+	// },
+	// {
+	// 	title: "Firefly Docs",
+	// 	imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
+	// 	desc: "Firefly主题模板文档",
+	// 	siteurl: "https://docs-firefly.cuteleaf.cn",
+	// 	tags: ["Docs"],
+	// 	weight: 9,
+	// 	enabled: true,
+	// },
+	// {
+	// 	title: "Astro",
+	// 	imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
+	// 	desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
+	// 	siteurl: "https://github.com/withastro/astro",
+	// 	tags: ["Framework"],
+	// 	weight: 8,
+	// 	enabled: true,
+	// },
 ];
 
 // 获取启用的友链并进行排序
