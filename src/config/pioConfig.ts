@@ -98,9 +98,9 @@ export const live2dModelConfig: Live2DModelConfig = {
 	// 位置配置
 	position: {
 		// 显示位置 bottom-left，bottom-right，top-left，top-right，注意：在右下角可能会挡住返回顶部按钮
-		corner: "bottom-left",
+		corner: "bottom-right",
 		// 距离边缘0px
-		offsetX: 0,
+		offsetX: 100,
 		// 距离下边缘0px
 		offsetY: 0,
 	},
@@ -108,9 +108,9 @@ export const live2dModelConfig: Live2DModelConfig = {
 	// 尺寸配置
 	size: {
 		// 容器宽度
-		width: 270,
+		width: 180,
 		// 容器高度
-		height: 330,
+		height: 220,
 	},
 
 	// 交互配置
