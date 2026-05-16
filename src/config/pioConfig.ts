@@ -92,8 +92,7 @@ export const live2dModelConfig: Live2DModelConfig = {
 		// path: "/pio/models/live2d/snow_miku/model.json",
 		// path: "/pio/models/live2d/illyasviel/illyasviel.model.json",
 		// path: "/pio/models/live2d/homura/model.json",
-		// path: "/pio/models/live2d/madoka/model.json",
-		path: "/pio/models/live2d/UltimateMadoka/model.json",
+		path: "/pio/models/live2d/madoka/model.json",
 	},
 
 	// 位置配置
@@ -120,11 +119,14 @@ export const live2dModelConfig: Live2DModelConfig = {
 		enabled: true,
 		// 点击时随机显示的文字消息，motions 和 expressions 将从模型 JSON 文件中自动读取
 		clickMessages: [
-			"你好！我是Miku~",
-			"有什么需要帮助的吗？",
-			"今天天气真不错呢！",
-			"要不要一起玩游戏？",
-			"记得按时休息哦！",
+			"你好！我是Kaname Madoka~",
+			"Homura酱是我最好的朋友！",
+			"消灭世界上所有的魔女，这是圆环之理存在的理由。",
+			"不要伤心了，我一直在你身后。",
+			"不知道达也有没有长大一点，爸爸妈妈……",
+			"有什么不懂的吗？我很想回答你，但我数学不及格……",
+			"和我做朋友吧！",
+			"如果有人说能实现你的愿望，千万不要相信它哦！",
 		],
 		// 随机显示的文字消息显示时间（毫秒）
 		messageDisplayTime: 3000,
