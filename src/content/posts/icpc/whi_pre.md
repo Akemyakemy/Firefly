@@ -6,7 +6,7 @@ description: 2026武汉icpc邀请赛热身赛题解
 tags: [icpc, 武汉大学]
 category: icpc
 draft: true
-image: https://img.542000.xyz/file/默认封面/1778933351378_默认封面1.png
+image: https://img.542000.xyz/file/默认封面/1778934755777_武汉icpc.png
 ---
 
 ## 2026武汉icpc邀请赛热身赛题解
