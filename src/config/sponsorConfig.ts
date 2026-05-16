@@ -39,22 +39,22 @@ export const sponsorConfig: SponsorConfig = {
 			description: "使用 微信 扫码赞助",
 			enabled: true,
 		},
-		{
-			name: "ko-fi",
-			icon: "simple-icons:kofi",
-			qrCode: "",
-			link: "https://ko-fi.com/cuteleaf",
-			description: "Buy a Coffee for Firefly",
-			enabled: true,
-		},
-		{
-			name: "爱发电",
-			icon: "simple-icons:afdian",
-			qrCode: "",
-			link: "https://ifdian.net/a/cuteleaf",
-			description: "通过 爱发电 进行赞助",
-			enabled: true,
-		},
+		// {
+		// 	name: "ko-fi",
+		// 	icon: "simple-icons:kofi",
+		// 	qrCode: "",
+		// 	link: "https://ko-fi.com/cuteleaf",
+		// 	description: "Buy a Coffee for Firefly",
+		// 	enabled: true,
+		// },
+		// {
+		// 	name: "爱发电",
+		// 	icon: "simple-icons:afdian",
+		// 	qrCode: "",
+		// 	link: "https://ifdian.net/a/cuteleaf",
+		// 	description: "通过 爱发电 进行赞助",
+		// 	enabled: true,
+		// },
 	],
 
 	// 赞助者列表（可选）
@@ -62,6 +62,7 @@ export const sponsorConfig: SponsorConfig = {
 		// 示例：已实名赞助者
 		{
 			name: "夏叶",
+			avatar: "https://img.542000.xyz/file/1778930228397_dd7d8c4f738c7fd63ba9450b2948284fed2036e2193445-0136zu_fw1200webp.webp",
 			amount: "¥50",
 			date: "2025-10-01",
 		},
