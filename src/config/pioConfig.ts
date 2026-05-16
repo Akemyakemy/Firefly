@@ -92,7 +92,8 @@ export const live2dModelConfig: Live2DModelConfig = {
 		// path: "/pio/models/live2d/snow_miku/model.json",
 		// path: "/pio/models/live2d/illyasviel/illyasviel.model.json",
 		// path: "/pio/models/live2d/homura/model.json",
-		path: "/pio/models/live2d/madoka/model.json",
+		// path: "/pio/models/live2d/madoka/model.json",
+		path: "/pio/models/live2d/UltimateMadoka/model.json",
 	},
 
 	// 位置配置
