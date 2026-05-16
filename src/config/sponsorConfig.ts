@@ -58,20 +58,20 @@ export const sponsorConfig: SponsorConfig = {
 	],
 
 	// 赞助者列表（可选）
-	sponsors: [
-		// 示例：已实名赞助者
-		{
-			name: "夏叶",
-			avatar: "https://img.542000.xyz/file/1778930228397_dd7d8c4f738c7fd63ba9450b2948284fed2036e2193445-0136zu_fw1200webp.webp",
-			amount: "¥50",
-			date: "2025-10-01",
-		},
+	// sponsors: [
+	// 	// 示例：已实名赞助者
+	// 	{
+	// 		name: "夏叶",
+	// 		avatar: "https://img.542000.xyz/file/1778930228397_dd7d8c4f738c7fd63ba9450b2948284fed2036e2193445-0136zu_fw1200webp.webp",
+	// 		amount: "¥50",
+	// 		date: "2025-10-01",
+	// 	},
 
-		// 示例：匿名赞助者
-		{
-			name: "匿名用户",
-			amount: "¥20",
-			date: "2025-10-01",
-		},
-	],
+	// 	// 示例：匿名赞助者
+	// 	{
+	// 		name: "匿名用户",
+	// 		amount: "¥20",
+	// 		date: "2025-10-01",
+	// 	},
+	// ],
 };
