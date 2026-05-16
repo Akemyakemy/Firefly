@@ -110,10 +110,10 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"Cherish as long as we, last Cause S is not for sayonara",
+				"Cherish as long as we last, Cause S is not for sayonara",
 				"Experience I never had, I'm so happy,Happy to just be part of your story",
 				"Do you recall? Back when a smile was more than enough, To make us friends",
-				"Fly, broken wings, To somewhere we can free, Closer to our IDEAL",
+				"Fly, broken wings, To somewhere we can be free, Closer to our IDEAL",
 				"Love must be the reason why, I still believe in this lie",
 				"Buckled up on velvet seats, Sceneries were passing by",
 				"Not so different from our hell, Not so different from our home",
