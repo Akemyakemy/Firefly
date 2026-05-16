@@ -85,13 +85,13 @@ export const spineModelConfig: SpineModelConfig = {
 // Live2D 看板娘配置
 export const live2dModelConfig: Live2DModelConfig = {
 	// Live2D 看板娘开关
-	enable: false,
+	enable: true,
 	// Live2D模型配置
 	model: {
 		// Live2D模型文件路径
-		path: "/pio/models/live2d/snow_miku/model.json",
+		// path: "/pio/models/live2d/snow_miku/model.json",
 		// path: "/pio/models/live2d/illyasviel/illyasviel.model.json",
-		// path: "/pio/models/live2d/Furina/items_pinned_to_model.json",
+		path: "pio\models\live2d\Homura Akemi (Glasses) (Kimono)\model.json",
 	},
 
 	// 位置配置
