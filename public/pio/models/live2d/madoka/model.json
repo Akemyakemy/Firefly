@@ -4,6 +4,17 @@
 	"textures":[
 		"model.2048/texture_00.png"
 	],
+	"layout": {
+        "center_x":0.0,
+        "center_y": -1.0,
+        "width": 3.5
+    },
+    "hit_areas_custom": {
+        "head_x": [-0.15, 1.0],
+        "head_y": [1.0,0.2],
+        "body_x": [-0.3, -0.25],
+        "body_y": [0.2, -0.9]
+    },
 	"expressions":[
 		{"name":"mtn_ex_010.exp.json","file":"exp/mtn_ex_010.exp.json"},
 		{"name":"mtn_ex_011.exp.json","file":"exp/mtn_ex_011.exp.json"},
@@ -15,14 +26,18 @@
 		{"name":"mtn_ex_060.exp.json","file":"exp/mtn_ex_060.exp.json"}
 	],
 	"motions":{
-		"motion":[
-			{"name":"motion_000","file":"mtn/motion_000.mtn"},
-			{"name":"motion_001","file":"mtn/motion_001.mtn"},
-			{"name":"motion_100","file":"mtn/motion_100.mtn"},
-			{"name":"motion_200","file":"mtn/motion_200.mtn"},
-			{"name":"motion_201","file":"mtn/motion_201.mtn"},
-			{"name":"motion_300","file":"mtn/motion_300.mtn"},
-			{"name":"motion_400","file":"mtn/motion_400.mtn"}
+		"idle":[
+			{"file":"mtn/motion_000.mtn"},
+			{"file":"mtn/motion_001.mtn"}
+		],
+		"flick_head":[
+			{"file":"mtn/motion_100.mtn"}
+		],
+		"tap_body":[
+			{"file":"mtn/motion_200.mtn"},
+			{"file":"mtn/motion_201.mtn"},
+			{"file":"mtn/motion_300.mtn"},
+			{"file":"mtn/motion_400.mtn"}
 		]
 	},
 	"physics":"physics.json",
