@@ -47,7 +47,7 @@ export const zh_CN: Translation = {
 
 	[Key.comments]: "评论",
 	[Key.commentSection]: "评论区",
-	[Key.commentSubtitle]: "分享你的想法，与大家交流讨论",
+	[Key.commentSubtitle]: "twikoo评论系统评论规范：昵称+邮箱+网址。<br>邮箱用于获取QQ头像（填写QQ邮箱时可以实现）。<br>网址用于点击你的评论后跳转到您的主页。",
 	[Key.commentNotConfigured]: "评论系统暂未配置",
 	[Key.guestbookCommentHint]:
 		"您还未在配置文件中启用评论系统，启用后访客才可在此留言",

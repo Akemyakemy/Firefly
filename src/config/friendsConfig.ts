@@ -49,7 +49,7 @@ export const friendsConfig: FriendLink[] = [
 		desc: "分享生活和技术。",
 		siteurl: "https://blog.520781.xyz",
 		tags: ["Blog"],
-		weight: Number.MAX_SAFE_INTEGER-1, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER-2, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	// {

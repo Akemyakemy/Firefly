@@ -90,8 +90,8 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			"assets/images/MobileWallpaper/h5.avif",
 			"assets/images/MobileWallpaper/h6.avif",
 			"assets/images/MobileWallpaper/h7.avif",
-			"assets/images/MobileWallpaper/h8.avif",
-			"assets/images/MobileWallpaper/h9.avif",
+			// "assets/images/MobileWallpaper/h8.avif",
+			// "assets/images/MobileWallpaper/h9.avif",
 		],
 	},
 	// 横幅壁纸和全屏壁纸共享配置
