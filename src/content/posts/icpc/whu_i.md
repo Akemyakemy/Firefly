@@ -1,6 +1,6 @@
 ---
 title: 2026武汉icpc邀请赛题解
-published: 2026-05-DD
+published: 2026-05-17
 pinned: false
 description: 2026武汉icpc邀请赛题解
 tags: [icpc, 武汉大学]
