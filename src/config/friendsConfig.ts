@@ -26,7 +26,7 @@ export const friendsConfig: FriendLink[] = [
 		title: "versus0",
 		imgurl:
 			"https://img.542000.xyz/file/friend_avatar/1778931720838_f167cb95af9d881f4378b92b3e181d89_4647054993754934443.jpg",
-		desc: "I may be still unripened.But I'm not afraid.",
+		desc: "技术+算法blog",
 		siteurl: "https://blog.542000.xyz",
 		tags: ["Blog"],
 		weight: Number.MAX_SAFE_INTEGER, // 权重，数字越大排序越靠前
