@@ -23,6 +23,14 @@ export const galleryConfig: GalleryConfig = {
 			date: "2026-05-017",
 			tags: ["原神", "芙宁娜"],
 		},
+		{
+			id: "AkemiHomura",
+			name: "晓美焰",
+			description: "Kaname Madoka, I will ultimately save you!",
+			location: "魔法少女小圆",
+			date: "2026-05-017",
+			tags: ["魔法少女小圆", "晓美焰"],
+		},
 		// {
 		// 	id: "firefly-2026",
 		// 	name: "可爱流萤",
