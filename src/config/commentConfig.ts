@@ -11,6 +11,8 @@ export const commentConfig: CommentConfig = {
 		lang: "zh-CN",
 		// 是否启用文章访问量统计功能
 		visitorCount: true,
+
+		//如果你配置了twikoo系统的 COMMENT_BG_IMG 网络图片，可以在 public/assets/css/twikoo.css 中搜索 .tk-input .el-textarea__inner 来按照提示修改输入文字颜色
 	},
 
 	//waline评论系统配置
