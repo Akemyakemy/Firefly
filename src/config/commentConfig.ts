@@ -3,6 +3,7 @@ import type { CommentConfig } from "../types/config";
 export const commentConfig: CommentConfig = {
 	// 评论系统类型: none, twikoo, waline, giscus, disqus, artalk，默认为none，即不启用评论系统
 	type: "none",
+	//开启评论后可以去 /src/components/comment/index.astro 修改 评论区装饰性背景
 
 	//twikoo评论系统配置，版本1.7.4
 	twikoo: {
