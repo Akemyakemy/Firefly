@@ -6,7 +6,7 @@ description: 2026武汉icpc邀请赛题解
 tags: [icpc, 武汉大学]
 category: icpc
 draft: false
-image: https://img.542000.xyz/file/默认封面/1778934755777_武汉icpc.png
+image: https://img.542000.xyz/file/默认封面/1779093840973_武汉icpc1.png
 ---
 
 ## 2026武汉icpc邀请赛题解
