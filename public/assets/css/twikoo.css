@@ -449,6 +449,7 @@ to {
   color: #f56c6c;
 }
 .tk-comment {
+  color:initial !important;
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
