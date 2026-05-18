@@ -34,9 +34,9 @@
 <!-- - 🐧 **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)** -->
 
 ---
-## 一点好玩的
+## 个人名片
 
-<iframe src="../" width="100%" height="800px" frameborder="0" scrolling="auto"></iframe>
+<iframe src="../namecard/versus0%20_%20Gravatar" width="100%" height="800px" frameborder="0" scrolling="auto"></iframe>
 
 ---
 
