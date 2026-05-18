@@ -3,7 +3,7 @@ title: 2026武汉icpc邀请赛题解
 published: 2026-05-18
 pinned: true
 description: 2026武汉icpc邀请赛题解
-tags: [icpc, 武汉大学]
+tags: [icpc, 武汉]
 category: icpc
 draft: false
 image: https://img.542000.xyz/file/默认封面/1779093840973_武汉icpc1.png
