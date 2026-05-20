@@ -19,6 +19,62 @@ image: https://img.542000.xyz/file/默认封面/1779093840973_武汉icpc1.png
 
 ### C 相信着你
 
+​	纯模拟题，需要注意的细节是当这一回合你的总伤害大于怪物剩余伤害，可以选择不防御。
+
+​	$(k+d-1)/d$ 向上取整求出至少使用防御卡牌的数量。
+
+```c++
+// C 相信着你
+#include<bits/stdc++.h>
+using namespace std;
+// #define int long long
+
+#define gc getchar
+#define pc putchar
+inline int read(){//手动读取数字更加快速
+    int sum=0,d=1;
+    char c=gc();
+    while(c<'0'||c>'9'){
+        if(c=='-')d=-1;
+        c=gc();
+    }
+    while(c>='0'&&c<='9'){
+        sum=sum*10+c-'0';
+        c=gc();
+    }
+    return sum*d;
+}
+inline void print(int x){
+	if(x<0) pc('-'),x=-x;
+	if(x<10) pc(x+'0');
+	else print(x/10),pc(x%10+'0');
+}
+
+int n,s,d,hp;
+int a,k;
+signed main(){
+	n=read();
+	s=read(),d=read(),hp=read();
+	bool flg=0;
+	for(int i=1;i<=n;i++){
+		a=read(),k=read();
+		if(flg) continue;
+		if(min(a,3)*s>=hp){
+			printf("Yes\n%d",i);
+			flg=1;
+		}
+		if(flg) continue;
+		if(min(5-a,3)*d<k){
+			printf("No");
+			flg=1;
+		}
+		hp-=s*min(a,3-(k+d-1)/d);
+	}
+	if(!flg) printf("No");
+	return 0;
+}
+```
+
 ### D 质数博弈
 
 ​	先手策略是将 $n$ 变成一个 $n$ 到 $(2n-1)$  之间的一个数，该数最优的情况只包含 $2$ 和 $3$ 作为因数，后手策略每次选择该数最大的因数作除法，这样可以使 $n$ 的减小速度最快。
@@ -87,7 +143,7 @@ int dfs(int n){
 	int p=lower_bound(a,a+idx,n)-a; // 先手可选择的数为n<=a[p+j]<2*n
 	// printf("%lld:%lld:%lld\n",n,p,a[p]);
 	int j=0;
-	while(a[p+j]<2*n){ // 后手为最优策略为有3取3,没3取2
+	while(a[p+j]<2*n && p+j<idx){ // 后手为最优策略为有3取3,没3取2
 		// printf("%lld:%lld\n",n,a[p+j]);
 		if(a[p+j]%3==0) ans=max(ans,dfs(a[p+j]/3)+1);
 		else ans=max(ans,dfs(a[p+j]/2)+1);
