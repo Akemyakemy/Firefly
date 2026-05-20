@@ -52,6 +52,16 @@ export const friendsConfig: FriendLink[] = [
 		weight: Number.MAX_SAFE_INTEGER-2, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
+	{
+		title: "Saimen blog",
+		imgurl:
+			"https://img.z2m.store/file/1779081943822_butterfly-icon.png",
+		desc: "读史可以明智,知古方能鉴今。",
+		siteurl: "https://com.z2m.store",
+		tags: ["Blog"],
+		weight: Number.MAX_SAFE_INTEGER-3, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 	// {
 	// 	title: "夏夜流萤",
 	// 	imgurl:
