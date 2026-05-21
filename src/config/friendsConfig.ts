@@ -62,6 +62,16 @@ export const friendsConfig: FriendLink[] = [
 		weight: Number.MAX_SAFE_INTEGER-3, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
+	{
+		title: "Hyde Blog",
+		imgurl:
+			"https://seasir.top/assets/avatar.avif",
+		desc: "人心中的成见是一座大山~",
+		siteurl: "https://seasir.top/",
+		tags: ["Blog"],
+		weight: Number.MAX_SAFE_INTEGER-4, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 	// {
 	// 	title: "夏夜流萤",
 	// 	imgurl:
