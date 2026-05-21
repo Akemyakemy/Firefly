@@ -3,7 +3,7 @@ title: ST表-RMQ问题
 published: 2026-05-22
 pinned: false
 description: ST表-RMQ问题实现
-tags: [算法, 数据结构，倍增]
+tags: [数据结构, 倍增]
 category: 数据结构
 draft: false
 image: https://img.542000.xyz/file/默认封面/1779382134656_preview.jpg
@@ -26,7 +26,7 @@ Sparse Table，稀疏表
 
 ST表是一种**倍增**算法。预处理时间复杂度为 $O(nlogn)$，查询时间复杂度为 $O(1)$。
 
-### 核心转移方程：
+### 核心转移方程
 
 $$
 f\left[ i \right] \left[ j \right] =\max \left( f\left[ i \right] \left[ j-1 \right] ,f\left[ i+\left( 1<<\left( j-1 \right) \right) \right] \left[ j-1 \right] \right)
