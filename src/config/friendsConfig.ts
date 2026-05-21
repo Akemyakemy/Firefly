@@ -72,6 +72,16 @@ export const friendsConfig: FriendLink[] = [
 		weight: Number.MAX_SAFE_INTEGER-4, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
+	{
+		title: "ZhiJing’s Blog",
+		imgurl:
+			"https://iwexe.top/avatar.svg",
+		desc: "Go with the flow.",
+		siteurl: "https://iwexe.top",
+		tags: ["Blog"],
+		weight: Number.MAX_SAFE_INTEGER-5, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 	// {
 	// 	title: "夏夜流萤",
 	// 	imgurl:
