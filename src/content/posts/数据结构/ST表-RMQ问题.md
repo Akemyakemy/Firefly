@@ -2,7 +2,7 @@
 title: ST表-RMQ问题
 published: 2026-05-22
 pinned: false
-description: 
+description: ST表-RMQ问题实现
 tags: [算法, 数据结构，倍增]
 category: 数据结构
 draft: false
