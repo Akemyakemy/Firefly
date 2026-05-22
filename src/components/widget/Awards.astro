@@ -1,0 +1,58 @@
+---
+import WidgetLayout from "@/components/common/WidgetLayout.astro";
+import { awardsConfig } from "@/config";
+import ImageWrapper from "@/components/common/ImageWrapper.astro";
+
+interface Props {
+	class?: string;
+	style?: string;
+}
+
+const { class: className, style } = Astro.props;
+
+const COLLAPSED_HEIGHT = "20rem";
+const isCollapsed = awardsConfig.awards.length > 5;
+
+const getAwardColorClass = (award: string) => {
+	if (award.includes("金")) return "text-amber-500 dark:text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)] font-black";
+	if (award.includes("银")) return "text-slate-400 dark:text-slate-300 font-bold";
+	if (award.includes("铜")) return "text-orange-600 dark:text-orange-400 font-bold";
+	if (award.includes("铁") || award.includes("优")) return "text-neutral-500 dark:text-neutral-400 font-bold";
+	return "text-(--primary) font-bold";
+};
+---
+
+<WidgetLayout name={awardsConfig.title} id="awards" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT} class={className} style={style}>
+    <!-- Programming Ability Section -->
+    <div class="flex items-center justify-between mb-4 px-3 py-2 bg-neutral-100 dark:bg-neutral-800 rounded-xl transition">
+        <span class="text-sm font-medium text-neutral-600 dark:text-neutral-400">{awardsConfig.programmingAbility.label}</span>
+        <div class="flex items-center gap-2">
+            <span class="text-sm font-bold text-(--primary)">{awardsConfig.programmingAbility.value}</span>
+            <ImageWrapper src={awardsConfig.programmingAbility.icon} alt="Medal" class="w-4 h-4 object-contain" />
+        </div>
+    </div>
+
+    <!-- Awards List -->
+    <div class="flex flex-col gap-4">
+        {awardsConfig.awards.map((yearGroup) => (
+            <div class="flex flex-col gap-2">
+                <div class="text-xs font-bold text-neutral-400 dark:text-neutral-500 px-1">
+                    {yearGroup.year}
+                </div>
+                <div class="flex flex-col gap-2">
+                    {yearGroup.list.map((award) => (
+                        <div class="flex items-center justify-between px-3 py-2 bg-neutral-50 dark:bg-neutral-900/50 rounded-xl border border-neutral-200/50 dark:border-neutral-700/50 transition hover:border-(--primary) group min-h-[3rem]">
+                            <span class="text-[0.8rem] leading-tight text-neutral-700 dark:text-neutral-300 transition pr-2">{award.name}</span>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class:list={["text-[0.8rem] font-bold transition whitespace-nowrap", getAwardColorClass(award.award)]}>
+                                    {award.award}
+                                </span>
+                                <ImageWrapper src={award.icon} alt="Medal" class="w-4 h-4 object-contain" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+</WidgetLayout>

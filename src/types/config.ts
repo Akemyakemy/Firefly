@@ -212,6 +212,23 @@ export type ProfileConfig = {
 	}[];
 };
 
+export type AwardConfig = {
+	title: string;
+	programmingAbility: {
+		label: string;
+		value: string;
+		icon: string;
+	};
+	awards: {
+		year: string;
+		list: {
+			name: string;
+			award: string;
+			icon: string;
+		}[];
+	}[];
+};
+
 export type LicenseConfig = {
 	enable: boolean;
 	name: string;
@@ -409,7 +426,8 @@ export type WidgetComponentType =
 	| "advertisement"
 	| "stats"
 	| "calendar"
-	| "music";
+	| "music"
+	| "awards";
 
 export type WidgetComponentConfig = {
 	type: WidgetComponentType; // 组件类型
