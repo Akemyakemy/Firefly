@@ -20,6 +20,23 @@ const getAwardColorClass = (award: string) => {
 	if (award.includes("铁") || award.includes("优")) return "text-neutral-500 dark:text-neutral-400 font-bold";
 	return "text-(--primary) font-bold";
 };
+
+const getCompetitionSegments = (name: string) => {
+	if (name.length <= 3) return [{ text: name, color: "" }];
+	
+	const mainPart = name.slice(0, -3);
+	const suffixPart = name.slice(-3);
+	const suffixColor = suffixPart === "邀请赛" ? "text-emerald-500 dark:text-emerald-400 font-bold" : "text-sky-500 dark:text-sky-400 font-bold";
+
+	const segments = mainPart.split(/(ICPC|CCPC)/g).map(segment => {
+		if (segment === "ICPC") return { text: segment, color: "text-red-600 dark:text-red-400 font-bold" };
+		if (segment === "CCPC") return { text: segment, color: "text-orange-500 dark:text-orange-400 font-bold" };
+		return { text: segment, color: "" };
+	});
+
+	segments.push({ text: suffixPart, color: suffixColor });
+	return segments;
+};
 ---
 
 <WidgetLayout name={awardsConfig.title} id="awards" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT} class={className} style={style}>
@@ -40,17 +57,24 @@ const getAwardColorClass = (award: string) => {
                     {yearGroup.year}
                 </div>
                 <div class="flex flex-col gap-2">
-                    {yearGroup.list.map((award) => (
-                        <div class="flex items-center justify-between px-3 py-2 bg-neutral-50 dark:bg-neutral-900/50 rounded-xl border border-neutral-200/50 dark:border-neutral-700/50 transition hover:border-(--primary) group min-h-[3rem]">
-                            <span class="text-[0.8rem] leading-tight text-neutral-700 dark:text-neutral-300 transition pr-2">{award.name}</span>
-                            <div class="flex items-center gap-1.5 shrink-0">
-                                <span class:list={["text-[0.8rem] font-bold transition whitespace-nowrap", getAwardColorClass(award.award)]}>
-                                    {award.award}
+                    {yearGroup.list.map((award) => {
+                        const segments = getCompetitionSegments(award.name);
+                        return (
+                            <div class="flex items-center justify-between px-3 py-2 bg-neutral-50 dark:bg-neutral-900/50 rounded-xl border border-neutral-200/50 dark:border-neutral-700/50 transition hover:border-(--primary) group min-h-[3rem]">
+                                <span class="text-[0.8rem] leading-tight text-neutral-700 dark:text-neutral-300 transition pr-2">
+                                    {segments.map(seg => (
+                                        <span class={seg.color}>{seg.text}</span>
+                                    ))}
                                 </span>
-                                <ImageWrapper src={award.icon} alt="Medal" class="w-4 h-4 object-contain" />
+                                <div class="flex items-center gap-1.5 shrink-0">
+                                    <span class:list={["text-[0.8rem] font-bold transition whitespace-nowrap", getAwardColorClass(award.award)]}>
+                                        {award.award}
+                                    </span>
+                                    <ImageWrapper src={award.icon} alt="Medal" class="w-4 h-4 object-contain" />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         ))}
