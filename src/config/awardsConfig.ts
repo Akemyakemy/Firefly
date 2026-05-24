@@ -12,6 +12,11 @@ export const awardsConfig: AwardConfig = {
 			year: "2026",
 			list: [
 				{
+					name: "南昌CCPC邀请赛",
+					award: "金奖",
+					icon: "/assets/images/medals/gold.png",
+				},
+				{
 					name: "武汉ICPC邀请赛",
 					award: "铁奖",
 					icon: "/assets/images/medals/iron.png",
