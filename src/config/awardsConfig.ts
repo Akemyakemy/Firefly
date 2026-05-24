@@ -4,7 +4,7 @@ export const awardsConfig: AwardConfig = {
 	title: "荣誉奖项",
 	programmingAbility: {
 		label: "XCPC程序设计能力",
-		value: "Lv3",
+		value: "Lv4",
 		icon: "/assets/images/balloon/green.png",
 	},
 	awards: [
