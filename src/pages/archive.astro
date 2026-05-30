@@ -1,6 +1,5 @@
 ---
 import ArchivePanel from "@components/controls/ArchivePanel.svelte";
-import PostHeatmap from "@components/controls/PostHeatmap.svelte";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
@@ -10,6 +9,5 @@ const sortedPostsList = await getSortedPostsList();
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)}>
-  <PostHeatmap sortedPosts={sortedPostsList} client:only="svelte" />
   <ArchivePanel sortedPosts={sortedPostsList} client:only="svelte" />
 </MainGridLayout>

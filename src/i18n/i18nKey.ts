@@ -307,31 +307,6 @@ enum I18nKey {
 	passwordSubmit = "passwordSubmit",
 	passwordError = "passwordError",
 	passwordProtectedRss = "passwordProtectedRss",
-
-	// Heatmap
-	heatmapTitle = "heatmapTitle",
-	heatmapSun = "heatmapSun",
-	heatmapMon = "heatmapMon",
-	heatmapTue = "heatmapTue",
-	heatmapWed = "heatmapWed",
-	heatmapThu = "heatmapThu",
-	heatmapFri = "heatmapFri",
-	heatmapSat = "heatmapSat",
-	heatmapLess = "heatmapLess",
-	heatmapMore = "heatmapMore",
-	heatmapJan = "heatmapJan",
-	heatmapFeb = "heatmapFeb",
-	heatmapMar = "heatmapMar",
-	heatmapApr = "heatmapApr",
-	heatmapMay = "heatmapMay",
-	heatmapJun = "heatmapJun",
-	heatmapJul = "heatmapJul",
-	heatmapAug = "heatmapAug",
-	heatmapSep = "heatmapSep",
-	heatmapOct = "heatmapOct",
-	heatmapNov = "heatmapNov",
-	heatmapDec = "heatmapDec",
-	heatmapPostOn = "heatmapPostOn",
 }
 
 export default I18nKey;
