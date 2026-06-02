@@ -9,7 +9,7 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/furina_avatar.avif",
 
 	// 名字
-	name: "versus0🌦️💡🎈",
+	name: "versus0☁️💡🎈",
 
 	// 个人签名
 	bio: "I may be still unripened.But I'm not afraid.",
