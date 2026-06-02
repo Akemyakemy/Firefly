@@ -6,7 +6,7 @@ description: 各种存储容器的增删改查
 tags: [数据结构]
 category: 数据结构
 draft: false
-image: https://img.542000.xyz/file/算法/1780290653354_preview.jpg
+image: https://img.542000.xyz/file/默认封面/1780290653354_preview.jpg
 ---
 
 ## STL容器

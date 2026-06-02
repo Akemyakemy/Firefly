@@ -6,7 +6,7 @@ description: 二进制存储的专署容器
 tags: [数据结构]
 category: 数据结构
 draft: false
-image: https://img.542000.xyz/file/算法/1780291171922_preview.jpg
+image: https://img.542000.xyz/file/默认封面/1780291171922_preview.jpg
 ---
 
 ## bitset
