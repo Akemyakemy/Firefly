@@ -3,7 +3,7 @@ title: STL容器
 published: 2026-06-01
 pinned: false
 description: 各种存储容器的增删改查
-tags: [数据结构]
+tags: [数据结构, STL]
 category: 数据结构
 draft: false
 image: https://img.542000.xyz/file/默认封面/1780290653354_preview.jpg

@@ -3,7 +3,7 @@ title: bitset
 published: 2026-06-01
 pinned: false
 description: 二进制存储的专署容器
-tags: [数据结构]
+tags: [数据结构, 二进制]
 category: 数据结构
 draft: false
 image: https://img.542000.xyz/file/默认封面/1780291171922_preview.jpg
