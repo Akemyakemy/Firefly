@@ -21,7 +21,7 @@ export const fontConfig = {
 			family:
 				"system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
 		},
-		
+
 		"dingtalk-jinbuti": {
 			id: "dingtalk-jinbuti",
 			name: "钉钉进步体",
@@ -31,7 +31,6 @@ export const fontConfig = {
 			family: "DingTalk JinBuTi",
 			display: "swap",
 		},
-
 
 		// Google Fonts - Zen Maru Gothic
 		"zen-maru-gothic": {

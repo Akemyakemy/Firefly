@@ -34,52 +34,47 @@ export const friendsConfig: FriendLink[] = [
 	},
 	{
 		title: "番茄主理人",
-		imgurl:
-			"https://q1.qlogo.cn/g?b=qq&nk=20447289&s=640",
+		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=20447289&s=640",
 		desc: "坐而言不如起而行.",
 		siteurl: "https://fqzlr.com/",
 		tags: ["Blog"],
-		weight: Number.MAX_SAFE_INTEGER-1, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER - 1, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	{
 		title: "年华",
-		imgurl:
-			"https://q1.qlogo.cn/g?b=qq&nk=1323860289&s=640",
+		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=1323860289&s=640",
 		desc: "分享生活和技术。",
 		siteurl: "https://blog.520781.xyz",
 		tags: ["Blog"],
-		weight: Number.MAX_SAFE_INTEGER-2, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER - 2, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	{
 		title: "Saimen blog",
-		imgurl:
-			"https://img.z2m.store/file/1779081943822_butterfly-icon.png",
+		imgurl: "https://img.z2m.store/file/1779081943822_butterfly-icon.png",
 		desc: "读史可以明智,知古方能鉴今。",
 		siteurl: "https://com.z2m.store",
 		tags: ["Blog"],
-		weight: Number.MAX_SAFE_INTEGER-3, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER - 3, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	{
 		title: "Hyde Blog",
-		imgurl:
-			"https://seasir.top/assets/avatar.avif",
+		imgurl: "https://seasir.top/assets/avatar.avif",
 		desc: "人心中的成见是一座大山~",
 		siteurl: "https://seasir.top/",
 		tags: ["Blog"],
-		weight: Number.MAX_SAFE_INTEGER-4, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER - 4, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	{
 		title: "ZhiJing’s Blog",
-		imgurl:
-			"https://iwexe.top/avatar.svg",
+		imgurl: "https://iwexe.top/avatar.svg",
 		desc: "Go with the flow.",
 		siteurl: "https://iwexe.top",
 		tags: ["Blog"],
-		weight: Number.MAX_SAFE_INTEGER-5, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER - 5, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	// {

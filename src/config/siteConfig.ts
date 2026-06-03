@@ -16,8 +16,7 @@ export const siteConfig: SiteConfig = {
 	site_url: "https://blog.542000.xyz",
 
 	// 站点描述
-	description:
-		"我不是0，我是一个技术博客，我记录了我学习的技术知识。",
+	description: "我不是0，我是一个技术博客，我记录了我学习的技术知识。",
 
 	// 站点关键词
 	keywords: [
@@ -234,10 +233,10 @@ export const siteConfig: SiteConfig = {
 		// 支持通配符 *，例如：["i0.hdslb.com", "*.bilibili.com"]
 		// 可解决指定域名图片加载时的 403 问题（如防盗链图片）
 		noReferrerDomains: [
-			"i0.hdslb.com",     // B站图床
+			"i0.hdslb.com", // B站图床
 			"i1.hdslb.com",
 			"i2.hdslb.com",
-			"*.bilibili.com",   // 支持通配符
+			"*.bilibili.com", // 支持通配符
 		],
 	},
 

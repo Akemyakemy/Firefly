@@ -1,7 +1,7 @@
 ---
+import ImageWrapper from "@/components/common/ImageWrapper.astro";
 import WidgetLayout from "@/components/common/WidgetLayout.astro";
 import { awardsConfig } from "@/config";
-import ImageWrapper from "@/components/common/ImageWrapper.astro";
 
 interface Props {
 	class?: string;
@@ -14,23 +14,38 @@ const COLLAPSED_HEIGHT = "20rem";
 const isCollapsed = awardsConfig.awards.length > 5;
 
 const getAwardColorClass = (award: string) => {
-	if (award.includes("金")) return "text-amber-500 dark:text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)] font-black";
-	if (award.includes("银")) return "text-slate-400 dark:text-slate-300 font-bold";
-	if (award.includes("铜")) return "text-orange-600 dark:text-orange-400 font-bold";
-	if (award.includes("铁") || award.includes("优")) return "text-neutral-500 dark:text-neutral-400 font-bold";
+	if (award.includes("金"))
+		return "text-amber-500 dark:text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)] font-black";
+	if (award.includes("银"))
+		return "text-slate-400 dark:text-slate-300 font-bold";
+	if (award.includes("铜"))
+		return "text-orange-600 dark:text-orange-400 font-bold";
+	if (award.includes("铁") || award.includes("优"))
+		return "text-neutral-500 dark:text-neutral-400 font-bold";
 	return "text-(--primary) font-bold";
 };
 
 const getCompetitionSegments = (name: string) => {
 	if (name.length <= 3) return [{ text: name, color: "" }];
-	
+
 	const mainPart = name.slice(0, -3);
 	const suffixPart = name.slice(-3);
-	const suffixColor = suffixPart === "邀请赛" ? "text-emerald-500 dark:text-emerald-400 font-bold" : "text-sky-500 dark:text-sky-400 font-bold";
+	const suffixColor =
+		suffixPart === "邀请赛"
+			? "text-emerald-500 dark:text-emerald-400 font-bold"
+			: "text-sky-500 dark:text-sky-400 font-bold";
 
-	const segments = mainPart.split(/(ICPC|CCPC)/g).map(segment => {
-		if (segment === "ICPC") return { text: segment, color: "text-red-600 dark:text-red-400 font-bold" };
-		if (segment === "CCPC") return { text: segment, color: "text-orange-500 dark:text-orange-400 font-bold" };
+	const segments = mainPart.split(/(ICPC|CCPC)/g).map((segment) => {
+		if (segment === "ICPC")
+			return {
+				text: segment,
+				color: "text-red-600 dark:text-red-400 font-bold",
+			};
+		if (segment === "CCPC")
+			return {
+				text: segment,
+				color: "text-orange-500 dark:text-orange-400 font-bold",
+			};
 		return { text: segment, color: "" };
 	});
 

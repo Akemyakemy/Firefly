@@ -27,8 +27,8 @@ export type {
 	WidgetComponentType,
 } from "@/types/config";
 export { adConfig1, adConfig2 } from "./adConfig"; // 广告配置
-export { awardsConfig } from "./awardsConfig"; // 奖项配置
 export { announcementConfig } from "./announcementConfig"; // 公告配置
+export { awardsConfig } from "./awardsConfig"; // 奖项配置
 // 样式配置
 export { backgroundWallpaper } from "./backgroundWallpaper"; // 背景壁纸配置
 // 功能配置
