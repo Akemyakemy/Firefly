@@ -77,6 +77,15 @@ export const friendsConfig: FriendLink[] = [
 		weight: Number.MAX_SAFE_INTEGER - 5, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
+	{
+		title: "沈幼楚の小窝",
+		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=1050925710&s=640",
+		desc: "天真永不消逝，浪漫至死不渝.",
+		siteurl: "https://blog.shenyouchu.cn/",
+		tags: ["Blog"],
+		weight: Number.MAX_SAFE_INTEGER - 5, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 	// {
 	// 	title: "夏夜流萤",
 	// 	imgurl:
