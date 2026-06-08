@@ -83,7 +83,16 @@ export const friendsConfig: FriendLink[] = [
 		desc: "天真永不消逝，浪漫至死不渝.",
 		siteurl: "https://blog.shenyouchu.cn/",
 		tags: ["Blog"],
-		weight: Number.MAX_SAFE_INTEGER - 5, // 权重，数字越大排序越靠前
+		weight: Number.MAX_SAFE_INTEGER - 6, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
+	{
+		title: "星遐蝶梦",
+		imgurl: "https://blog.casto.top/assets/images/avatar.png",
+		desc: "星穹漫遐，蝶携清梦。",
+		siteurl: "https://blog.casto.top",
+		tags: ["Blog"],
+		weight: Number.MAX_SAFE_INTEGER - 7, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	// {
