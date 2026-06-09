@@ -62,4 +62,4 @@ int query(int l,int r){
 }
 ```
 
-此外，ST表还常用于**最近公共祖先(LCA)**的求解中。
+此外，ST表还常用于**[最近公共祖先(LCA) 问题](https://blog.542000.xyz/posts/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/)**的求解中。
