@@ -433,7 +433,11 @@ export type WidgetComponentType =
 	| "stats"
 	| "calendar"
 	| "music"
+<<<<<<< HEAD
 	| "awards";
+=======
+	| "siteInfo";
+>>>>>>> e0c522b8 (feat: 添加站点信息组件及相关国际化支持)
 
 export type WidgetComponentConfig = {
 	type: WidgetComponentType; // 组件类型
