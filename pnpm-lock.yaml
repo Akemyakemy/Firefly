@@ -146,6 +146,9 @@ importers:
       rehype-slug:
         specifier: ^6.0.0
         version: 6.0.0
+      remark-admonition-to-blockquote-callout:
+        specifier: ^1.0.0
+        version: 1.0.0
       remark-directive:
         specifier: ^3.0.1
         version: 3.0.1
@@ -4569,9 +4572,15 @@ packages:
   rehype@13.0.2:
     resolution: {integrity: sha512-j31mdaRFrwFRUIlxGeuPXXKWQxet52RBQRvCmzl5eCefn/KGbomK5GMHNMsOJf55fgo3qw5tST5neDuarDYR2A==}
 
+<<<<<<< HEAD
   remark-directive-rehype@0.4.2:
     resolution: {integrity: sha512-T6e+IG+BwqU4++MK54vFb+KDFjs3a+tHeK6E0T0ctR1FSyngolfDtAEzqxHWlRzQZqGi2sB4DFXry6oqH87D/g==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+=======
+  remark-admonition-to-blockquote-callout@1.0.0:
+    resolution: {integrity: sha512-mDVqlEmopZb3Y6IcUCfC3qrSEXHUQy+EOOzAOYfobJ8JkLiIA05Qyo9nTysZvgCJfNpQdqq2hl9cJMnvIdNISg==}
+    engines: {node: '>=16.0.0'}
+>>>>>>> 851176b6 (feat: 添加对 Python-Markdown 风格的 admonition 语法支持 #192)
 
   remark-directive@3.0.1:
     resolution: {integrity: sha512-gwglrEQEZcZYgVyG1tQuA+h58EZfq5CSULw7J90AFuCTyib1thgHPoqQ+h9iFvU6R+vnZ5oNFQR5QKgGpk741A==}
@@ -10809,10 +10818,16 @@ snapshots:
       rehype-stringify: 10.0.1
       unified: 11.0.5
 
+<<<<<<< HEAD
   remark-directive-rehype@0.4.2:
     dependencies:
       hastscript: 7.2.0
       unist-util-map: 3.1.3
+=======
+  remark-admonition-to-blockquote-callout@1.0.0:
+    dependencies:
+      '@types/mdast': 4.0.4
+>>>>>>> 851176b6 (feat: 添加对 Python-Markdown 风格的 admonition 语法支持 #192)
 
   remark-directive@3.0.1:
     dependencies:

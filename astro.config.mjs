@@ -14,6 +14,7 @@ import rehypeKatex from "rehype-katex";
 import katex from "katex";
 import "katex/dist/contrib/mhchem.mjs"; // 加载 mhchem 扩展
 import rehypeSlug from "rehype-slug";
+import remarkAdmonitionToBlockquoteCallout from "remark-admonition-to-blockquote-callout";
 import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkMath from "remark-math";
 import rehypeCallouts from "rehype-callouts";
@@ -193,6 +194,7 @@ export default defineConfig({
 		mdx(),
 	],
 	markdown: {
+<<<<<<< HEAD
 		remarkPlugins: [
 			remarkMath,
 			remarkReadingTime,
@@ -218,6 +220,38 @@ export default defineConfig({
 				{
 					components: {
 						github: GithubCardComponent,
+=======
+		processor: unified({
+			remarkPlugins: [
+				...(siteConfig.rehypeCallouts.enablePythonMarkdownAdmonitions !== false
+					? [remarkAdmonitionToBlockquoteCallout]
+					: []),
+				remarkMath,
+				remarkReadingTime,
+				remarkImageGrid,
+				remarkExcerpt,
+				remarkDirective,
+				remarkSectionize,
+				parseDirectiveNode,
+				remarkMermaid,
+				[remarkPlantuml, plantumlConfig],
+			],
+			rehypePlugins: [
+				[rehypeKatex, { katex }],
+				[rehypeCallouts, { theme: siteConfig.rehypeCallouts.theme }],
+				rehypeSlug,
+				rehypeMermaid,
+				rehypePlantuml,
+				rehypeFigure,
+				[rehypeExternalLinks, { siteUrl: siteConfig.site_url }],
+				[rehypeEmailProtection, { method: "base64" }], // 邮箱保护插件，支持 'base64' 或 'rot13'
+				[
+					rehypeComponents,
+					{
+						components: {
+							github: GithubCardComponent,
+						},
+>>>>>>> 851176b6 (feat: 添加对 Python-Markdown 风格的 admonition 语法支持 #192)
 					},
 				},
 			],
