@@ -252,7 +252,10 @@ export default defineConfig({
 			minify: "esbuild",
 			esbuildOptions: {
 				minify: true,
-				drop: ["console", "debugger"],
+				// 删除 debugger 语句；console.log / console.debug 无副作用，未使用返回值时会被 dead code elimination 移除，
+				// console.warn / console.error 保留，确保生产环境出错时仍有日志可查
+				drop: ["debugger"],
+				pure: ["console.log", "console.debug"],
 			},
 			rollupOptions: {
 				onwarn(warning, warn) {
@@ -271,3 +274,4 @@ export default defineConfig({
 		},
 	},
 });
+
