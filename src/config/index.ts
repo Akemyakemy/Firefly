@@ -26,7 +26,7 @@ export type {
 	SponsorMethod,
 	WidgetComponentConfig,
 	WidgetComponentType,
-	WidgetResponsiveConfig,
+	WidgetSpecificConfig,
 } from "../types/config";
 
 export { announcementConfig } from "./announcementConfig"; // 公告配置

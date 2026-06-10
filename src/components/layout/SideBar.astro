@@ -15,7 +15,6 @@ import { sidebarLayoutConfig } from "@/config";
 import type {
 	MobileBottomComponentConfig,
 	WidgetComponentConfig,
-	WidgetComponentType,
 } from "@/types/config";
 
 interface Props {
@@ -53,7 +52,7 @@ const componentMap = {
 	music: Music,
 	awards: Awards,
 	siteInfo: SiteInfo,
-} satisfies Record<WidgetComponentType, typeof Profile>;
+};
 
 // 获取侧边栏位置
 const side = (Astro.props.side ||
@@ -134,7 +133,7 @@ const getComponentProps = (
 	const baseProps: Record<string, unknown> = {
 		class: "onload-animation",
 		style: `animation-delay: ${getAnimationDelay(index)}`,
-		componentConfig: config,
+		widgetConfig: config,
 	};
 
 	// 添加 showOnPostPage 和 showOnNonPostPage 标记class（仅WidgetComponentConfig有这些属性）
