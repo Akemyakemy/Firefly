@@ -95,6 +95,24 @@ export const friendsConfig: FriendLink[] = [
 		weight: Number.MAX_SAFE_INTEGER - 7, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
+	{
+		title: "JustPureH2O",
+		imgurl: "https://justpureh2o.cn/avatar.jpg",
+		desc: "穷方圆平直之情，尽规矩准绳之用",
+		siteurl: "https://justpureh2o.cn",
+		tags: ["Blog"],
+		weight: Number.MAX_SAFE_INTEGER - 8, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
+	{
+		title: "Summer",
+		imgurl: "https://hry.54120721.xyz/file/头像/hrywxhn.png",
+		desc: "桃李春风一杯酒，江湖夜雨十年灯。",
+		siteurl: "https://blog.54120721.xyz/",
+		tags: ["Blog"],
+		weight: Number.MAX_SAFE_INTEGER - 9, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 	// {
 	// 	title: "夏夜流萤",
 	// 	imgurl:
