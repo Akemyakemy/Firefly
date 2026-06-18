@@ -194,33 +194,6 @@ export default defineConfig({
 		mdx(),
 	],
 	markdown: {
-<<<<<<< HEAD
-		remarkPlugins: [
-			remarkMath,
-			remarkReadingTime,
-			remarkImageGrid,
-			remarkExcerpt,
-			remarkDirective,
-			remarkSectionize,
-			parseDirectiveNode,
-			remarkMermaid,
-			[remarkPlantuml, plantumlConfig],
-		],
-		rehypePlugins: [
-			[rehypeKatex, { katex }],
-			[rehypeCallouts, { theme: siteConfig.rehypeCallouts.theme }],
-			rehypeSlug,
-			rehypeMermaid,
-			rehypePlantuml,
-			rehypeFigure,
-			[rehypeExternalLinks, { siteUrl: siteConfig.site_url }],
-			[rehypeEmailProtection, { method: "base64" }], // 邮箱保护插件，支持 'base64' 或 'rot13'
-			[
-				rehypeComponents,
-				{
-					components: {
-						github: GithubCardComponent,
-=======
 		processor: unified({
 			remarkPlugins: [
 				...(siteConfig.rehypeCallouts.enablePythonMarkdownAdmonitions !== false
@@ -251,7 +224,6 @@ export default defineConfig({
 						components: {
 							github: GithubCardComponent,
 						},
->>>>>>> 851176b6 (feat: 添加对 Python-Markdown 风格的 admonition 语法支持 #192)
 					},
 				},
 			],
