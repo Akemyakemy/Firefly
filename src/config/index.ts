@@ -26,13 +26,9 @@ export type {
 	SponsorMethod,
 	WidgetComponentConfig,
 	WidgetComponentType,
-<<<<<<< HEAD
-} from "@/types/config";
-export { adConfig1, adConfig2 } from "./adConfig"; // 广告配置
-=======
 	WidgetResponsiveConfig,
 } from "../types/config";
->>>>>>> 1a0eb98f (feat: 重构广告组件，支持响应式配置并移除旧广告配置)
+
 export { announcementConfig } from "./announcementConfig"; // 公告配置
 export { awardsConfig } from "./awardsConfig"; // 奖项配置
 // 样式配置

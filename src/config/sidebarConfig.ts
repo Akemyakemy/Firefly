@@ -109,7 +109,6 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
-<<<<<<< HEAD
 			// 组件类型：音乐播放器
 			type: "music",
 			// 是否启用该组件
@@ -130,8 +129,6 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
-=======
->>>>>>> 1a0eb98f (feat: 重构广告组件，支持响应式配置并移除旧广告配置)
 			// 组件类型：日历组件
 			type: "calendar",
 			// 是否启用该组件
@@ -164,41 +161,15 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：广告栏组件 1
 			type: "advertisement",
 			// 是否启用该组件
-<<<<<<< HEAD
 			enable: false,
-=======
-			enable: true,
->>>>>>> 1a0eb98f (feat: 重构广告组件，支持响应式配置并移除旧广告配置)
 			// 是否显示组件标题
 			showTitle: false,
 			// 组件位置
 			position: "sticky",
 			// 是否在文章详情页显示
 			showOnPostPage: true,
-<<<<<<< HEAD
 			// 配置ID：使用第一个广告配置
 			configId: "ad1",
-=======
-			// 响应式配置（广告内容直接在此配置）
-			responsive: {
-				ad: {
-					image: {
-						src: "/assets/images/ad/ad1.webp",
-						alt: "广告横幅",
-						link: "https://haoka.lot-ml.com/plugreg.html?agentid=1423316",
-						external: true,
-					},
-					// 是否允许关闭广告
-					closable: false,
-					// 显示次数限制，-1为无限制
-					displayCount: -1,
-					// 组件内边距配置
-					padding: {
-						all: "1rem",
-					},
-				},
-			},
->>>>>>> 1a0eb98f (feat: 重构广告组件，支持响应式配置并移除旧广告配置)
 		},
 		{
 			// 组件类型：广告栏组件 2
