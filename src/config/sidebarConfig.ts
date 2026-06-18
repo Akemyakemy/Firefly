@@ -139,19 +139,12 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			position: "sticky",
 			// 是否在文章详情页显示
 			showOnPostPage: false,
-<<<<<<< HEAD
-			// 响应式配置
-			responsive: {
-				// 是否显示年度文章热力图
-				showHeatmap: false,
-=======
 			// 组件专属配置
 			specificConfig: {
 				calendar: {
 					// 是否显示年度文章热力图
 					showHeatmap: true,
 				},
->>>>>>> 6ca032e4 (refactor: 统一侧边栏组件配置传递方式)
 			},
 		},
 		{
