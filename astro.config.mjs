@@ -11,7 +11,6 @@ import icon from "astro-icon";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components";
 import rehypeKatex from "rehype-katex";
-import katex from "katex";
 import "katex/dist/contrib/mhchem.mjs";
 import rehypeSlug from "rehype-slug";
 import remarkAdmonitionToBlockquoteCallout from "remark-admonition-to-blockquote-callout";
@@ -38,8 +37,6 @@ import rehypeExternalLinks from "./src/plugins/rehype-external-links.mjs";
 import rehypeFigure from "./src/plugins/rehype-figure.mjs";
 import { remarkImageGrid } from "./src/plugins/remark-image-grid.js";
 import { plantumlConfig } from "./src/config";
-// ✅ 修复1：添加缺失的 unified 导入（Astro 6.4+ 必须显式导入）
-import { unified } from "@astrojs/markdown-remark";
 
 if (process.env.NODE_ENV === "development") {
 	setMaxListeners(20);
@@ -173,67 +170,62 @@ export default defineConfig({
 		mdx(),
 	],
 
-	// ✅ 修复2：修正 markdown.processor 的语法错误
-	// 原错误：rehypeAutolinkHeadings 被放在了 rehypePlugins 数组外面
 	markdown: {
-		processor: unified({
-			remarkPlugins: [
-				...(siteConfig.post.rehypeCallouts.enablePythonMarkdownAdmonitions !== false
-					? [remarkAdmonitionToBlockquoteCallout]
-					: []),
-				remarkMath,
-				remarkReadingTime,
-				remarkImageGrid,
-				remarkExcerpt,
-				remarkDirective,
-				remarkSectionize,
-				parseDirectiveNode,
-				remarkMermaid,
-				[remarkPlantuml, plantumlConfig],
-			],
-			rehypePlugins: [
-				[rehypeKatex, { katex }],
-				[rehypeCallouts, { theme: siteConfig.post.rehypeCallouts.theme }],
-				rehypeSlug,
-				rehypeMermaid,
-				rehypePlantuml,
-				rehypeFigure,
-				[rehypeExternalLinks, { siteUrl: siteConfig.site_url }],
-				[rehypeEmailProtection, { method: "base64" }],
-				[
-					rehypeComponents,
-					{
-						components: {
-							github: GithubCardComponent,
-						},
+		remarkPlugins: [
+			...(siteConfig.post.rehypeCallouts.enablePythonMarkdownAdmonitions !== false
+				? [remarkAdmonitionToBlockquoteCallout]
+				: []),
+			remarkMath,
+			remarkReadingTime,
+			remarkImageGrid,
+			remarkExcerpt,
+			remarkDirective,
+			remarkSectionize,
+			parseDirectiveNode,
+			remarkMermaid,
+			[remarkPlantuml, plantumlConfig],
+		],
+		rehypePlugins: [
+			[rehypeKatex, { strict: "ignore" }],
+			[rehypeCallouts, { theme: siteConfig.post.rehypeCallouts.theme }],
+			rehypeSlug,
+			rehypeMermaid,
+			rehypePlantuml,
+			rehypeFigure,
+			[rehypeExternalLinks, { siteUrl: siteConfig.site_url }],
+			[rehypeEmailProtection, { method: "base64" }],
+			[
+				rehypeComponents,
+				{
+					components: {
+						github: GithubCardComponent,
 					},
-				],
-				// ✅ 修复：把 rehypeAutolinkHeadings 移到 rehypePlugins 数组内部
-				[
-					rehypeAutolinkHeadings,
-					{
-						behavior: "append",
+				},
+			],
+			[
+				rehypeAutolinkHeadings,
+				{
+					behavior: "append",
+					properties: {
+						className: ["anchor"],
+					},
+					content: {
+						type: "element",
+						tagName: "span",
 						properties: {
-							className: ["anchor"],
+							className: ["anchor-icon"],
+							"data-pagefind-ignore": true,
 						},
-						content: {
-							type: "element",
-							tagName: "span",
-							properties: {
-								className: ["anchor-icon"],
-								"data-pagefind-ignore": true,
+						children: [
+							{
+								type: "text",
+								value: "#",
 							},
-							children: [
-								{
-									type: "text",
-									value: "#",
-								},
-							],
-						},
+						],
 					},
-				],
+				},
 			],
-		}),
+		],
 	},
 
 	vite: {
