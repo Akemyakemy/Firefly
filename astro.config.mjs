@@ -158,11 +158,24 @@ export default defineConfig({
 				const url = new URL(page);
 				const pathname = url.pathname;
 
-				if (pathname === "/friends/" && !siteConfig.pages.friends) return false;
-				if (pathname === "/sponsor/" && !siteConfig.pages.sponsor) return false;
-				if (pathname === "/guestbook/" && !siteConfig.pages.guestbook) return false;
-				if (pathname === "/bangumi/" && !siteConfig.pages.bangumi) return false;
-				if (pathname === "/gallery/" && !siteConfig.pages.gallery) return false;
+				if (pathname === "/friends/" && !siteConfig.pages.friends) {
+					return false;
+				}
+				if (pathname === "/sponsor/" && !siteConfig.pages.sponsor) {
+					return false;
+				}
+				if (pathname === "/guestbook/" && !siteConfig.pages.guestbook) {
+					return false;
+				}
+				if (pathname === "/bangumi/" && !siteConfig.pages.bangumi) {
+					return false;
+				}
+				if (pathname === "/gallery/" && !siteConfig.pages.gallery) {
+					return false;
+				}
+				if (pathname === "/anime/" && !siteConfig.pages.anime) {
+					return false;
+				}
 
 				return true;
 			},
