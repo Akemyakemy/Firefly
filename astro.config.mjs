@@ -51,11 +51,6 @@ export default defineConfig({
 		layout: "constrained",
 	},
 
-	experimental: {
-		rustCompiler: false,
-		queuedRendering: { enabled: true },
-	},
-
 	integrations: [
 		swup({
 			theme: false,
