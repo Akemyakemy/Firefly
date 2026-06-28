@@ -1,11 +1,14 @@
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwindcss from "@tailwindcss/vite";
+import cloudflare from "@astrojs/cloudflare";
 import { setMaxListeners } from "node:events";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
+import { pluginLanguageBadge } from "expressive-code-language-badge";
+import { pluginCollapsible } from "expressive-code-collapsible";
 import swup from "@swup/astro";
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -22,7 +25,6 @@ import { expressiveCodeConfig, fontConfig, fontsList, plantumlConfig, siteConfig
 import { collectUsedFontCssVars } from "./src/utils/fontHelper";
 import I18nKey from "./src/i18n/i18nKey";
 import { i18n } from "./src/i18n/translation";
-import { fontProviders } from "astro/config";
 import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.mjs";
 import { rehypeMermaid } from "./src/plugins/rehype-mermaid.mjs";
 import { rehypePlantuml } from "./src/plugins/rehype-plantuml.mjs";
@@ -36,7 +38,6 @@ import rehypeEmailProtection from "./src/plugins/rehype-email-protection.mjs";
 import rehypeExternalLinks from "./src/plugins/rehype-external-links.mjs";
 import rehypeFigure from "./src/plugins/rehype-figure.mjs";
 import { remarkImageGrid } from "./src/plugins/remark-image-grid.js";
-import { plantumlConfig } from "./src/config";
 
 if (process.env.NODE_ENV === "development") {
 	setMaxListeners(20);
@@ -46,6 +47,7 @@ export default defineConfig({
 	site: siteConfig.site_url,
 	base: "/",
 	trailingSlash: "always",
+	adapter: cloudflare(),
 
 	// 字体配置 - 只加载实际使用的字体，跳过未引用的以加快构建
 	fonts: (() => {
@@ -69,8 +71,6 @@ export default defineConfig({
 				return { ...f, provider };
 			});
 	})(),
-
-	adapter,
 
 	// 图像优化配置
 	image: {
@@ -278,8 +278,6 @@ export default defineConfig({
 			minify: "esbuild",
 			esbuildOptions: {
 				minify: true,
-				// 删除 debugger 语句；console.log / console.debug 无副作用，未使用返回值时会被 dead code elimination 移除，
-				// console.warn / console.error 保留，确保生产环境出错时仍有日志可查
 				drop: ["debugger"],
 				pure: ["console.log", "console.debug"],
 			},
@@ -300,4 +298,3 @@ export default defineConfig({
 		},
 	},
 });
-
