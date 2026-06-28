@@ -263,38 +263,41 @@ export default defineConfig({
 	},
 
 	vite: {
-		plugins: [tailwindcss()],
-		server: {
-			watch: {
-				ignored: ["**/package/**", "**/Firefly-docs/**"],
-			},
-		},
-		resolve: {
-			alias: {
-				"@rehype-callouts-theme": `rehype-callouts/theme/${siteConfig.post.rehypeCallouts.theme}`,
-			},
-		},
-		build: {
-			minify: "esbuild",
-			esbuildOptions: {
-				minify: true,
-				drop: ["debugger"],
-				pure: ["console.log", "console.debug"],
-			},
-			rollupOptions: {
-				onwarn(warning, warn) {
-					if (
-						warning.message.includes("is dynamically imported by") &&
-						warning.message.includes("but also statically imported by")
-					) {
-						return;
-					}
-					warn(warning);
+			plugins: [tailwindcss()],
+			server: {
+				watch: {
+					ignored: ["**/package/**", "**/Firefly-docs/**"],
 				},
 			},
-			cssCodeSplit: true,
-			cssMinify: "esbuild",
-			assetsInlineLimit: 4096,
+			resolve: {
+				alias: {
+					"@rehype-callouts-theme": `rehype-callouts/theme/${siteConfig.post.rehypeCallouts.theme}`,
+				},
+			},
+			build: {
+				minify: "esbuild",
+				esbuildOptions: {
+					minify: true,
+					drop: ["debugger"],
+					pure: ["console.log", "console.debug"],
+				},
+				rollupOptions: {
+					onwarn(warning, warn) {
+						if (
+							warning.message.includes("is dynamically imported by") &&
+							warning.message.includes("but also statically imported by")
+						) {
+							return;
+						}
+						warn(warning);
+					},
+				},
+				rolldownOptions: {
+					external: ["@napi-rs/wasm-runtime"],
+				},
+				cssCodeSplit: true,
+				cssMinify: "esbuild",
+				assetsInlineLimit: 4096,
+			},
 		},
-	},
 });
