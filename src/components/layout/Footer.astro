@@ -1,12 +1,10 @@
 ---
 import { footerConfig, profileConfig } from "@/config";
 import { url } from "@/utils/url-utils";
-// 静态导入 HTML 文件内容（构建时直接打包为字符串，兼容所有部署环境）
-import customFooterHtmlRaw from "../config/FooterConfig.html?raw";
+import customFooterHtmlRaw from "../../config/FooterConfig.html?raw";
 
 const currentYear = new Date().getFullYear();
 
-// 读取并处理 Footer 自定义内容
 let customFooterHtml = "";
 if (footerConfig.enable) {
 	try {
