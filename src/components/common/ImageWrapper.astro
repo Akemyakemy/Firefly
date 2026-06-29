@@ -1,6 +1,5 @@
 ---
 import { Image, Picture } from "astro:assets";
-import * as path from "node:path";
 import type { ImageMetadata } from "astro";
 import type { ImageFormat, ResponsiveImageLayout } from "@/types/config";
 import {
@@ -57,6 +56,28 @@ const isLocal = !(
 );
 const isPublic = src.startsWith("/");
 
+// 简易路径拼接与规范化，替代 node:path，兼容所有运行环境
+function joinNormalizePath(...segments: string[]): string {
+	let joined = segments.join("/").replace(/\\/g, "/");
+	joined = joined.replace(/\/+/g, "/");
+
+	const parts = joined.split("/");
+	const resolved: string[] = [];
+
+	for (const part of parts) {
+		if (part === "." || part === "") continue;
+		if (part === "..") {
+			resolved.pop();
+		} else {
+			resolved.push(part);
+		}
+	}
+
+	const startsWithSlash = joined.startsWith("/");
+	const result = resolved.join("/");
+	return startsWithSlash ? "/" + result : result;
+}
+
 // TODO temporary workaround for images dynamic import
 // https://github.com/withastro/astro/issues/3373
 let img: ImageMetadata | null = null;
@@ -67,9 +88,7 @@ if (isLocal) {
 			import: "default",
 		},
 	);
-	let normalizedPath = path
-		.normalize(path.join("../../", basePath, src))
-		.replace(/\\/g, "/");
+	const normalizedPath = joinNormalizePath("../../", basePath, src);
 	const file = files[normalizedPath];
 	if (!file) {
 		console.error(
