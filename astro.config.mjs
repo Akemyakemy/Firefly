@@ -47,7 +47,11 @@ export default defineConfig({
 	site: siteConfig.site_url,
 	base: "/",
 	trailingSlash: "always",
-	adapter: cloudflare(),
+	adapter: cloudflare({
+		// 开启 Cloudflare Workers Node.js 兼容，支持 node:fs / node:path / node:crypto 等所有内置模块
+		compatibilityFlags: ["nodejs_compat"],
+		compatibilityDate: "2026-06-29",
+	}),
 
 	// 字体配置 - 只加载实际使用的字体，跳过未引用的以加快构建
 	fonts: (() => {
