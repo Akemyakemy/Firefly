@@ -16,21 +16,21 @@ export const awardsConfig: AwardConfig = {
 					award: "金奖",
 					icon: "/assets/images/medals/gold.png",
 				},
-				{
-					name: "武汉ICPC邀请赛",
-					award: "铁奖",
-					icon: "/assets/images/medals/iron.png",
-				},
+				// {
+				// 	name: "武汉ICPC邀请赛",
+				// 	award: "铁奖",
+				// 	icon: "/assets/images/medals/iron.png",
+				// },
 			],
 		},
 		{
 			year: "2025",
 			list: [
-				{
-					name: "哈尔滨CCPC区域赛",
-					award: "铁奖",
-					icon: "/assets/images/medals/iron.png",
-				},
+				// {
+				// 	name: "哈尔滨CCPC区域赛",
+				// 	award: "铁奖",
+				// 	icon: "/assets/images/medals/iron.png",
+				// },
 				{
 					name: "成都ICPC区域赛",
 					award: "铜奖",
