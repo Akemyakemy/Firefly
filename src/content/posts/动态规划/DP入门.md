@@ -170,3 +170,24 @@ signed main(){
     return 0;
 }
 ```
+
+#### Dilworth定理（2026.8.25补充）
+
+$O(nlogn)$
+
+Dilworth定理：最少严格递减子序列的数量 = 原序列中**最长不下降子序列 (LIS)** 的长度！
+
+那么即可用set维护每个递减子序列的末尾最小值，每次更新时，用当前元素替换掉那个位置的元素，最后返回set的大小即可。
+
+```c++
+set<int> ans;//set底层逻辑为红黑树，可抽象理解为从小到大有序排列，支持迭代器操作
+ans.insert(a[1]);
+for(int i=2;i<=n;i++){
+    if(a[i]<*ans.rbegin()){
+        int p=*ans.lower_bound(a[i]);
+        ans.erase(p);
+    }
+    ans.insert(a[i]);
+}
+cout<<ans.size()<<endl;
+```
