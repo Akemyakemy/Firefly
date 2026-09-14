@@ -7,7 +7,7 @@ tags: [面试八股文]
 category: 面经
 draft: false
 password: "xhz060228"
-image: ./images/firefly2.avif
+image: ../images/firefly2.avif
 ---
 
 # 面试八股文\- 英雄编程
