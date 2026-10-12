@@ -5,7 +5,7 @@ pinned: false
 description: C++面试八股文
 tags: [面试八股文]
 category: 面经
-draft: false
+draft: true
 password: "xhz060228"
 image: ../images/firefly2.avif
 ---
